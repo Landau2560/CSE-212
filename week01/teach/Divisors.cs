@@ -15,10 +15,19 @@ public static class Divisors {
     /// to test divisibility.
     /// </summary>
     /// <param name="number">The number to find the divisor</param>
-    /// <returns>List of divisors</returns>
+    /// <returns>List of divisors</returns> 
     private static List<int> FindDivisors(int number) {
         List<int> results = new();
-        // TODO problem 1
+
+        results.Add(1);
+
+        for (int i = 2; i < number; i++)
+        {
+            if (number % i == 0)
+            {
+                results.Add(i);
+            }
+        }
         return results;
     }
 }
